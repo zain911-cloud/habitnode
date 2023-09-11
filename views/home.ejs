@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Habit Tracker</title>
+</head>
+<body>
+  <h1>Habit Tracker</h1>
+  <ul>
+    <% habits.forEach(habit => { %>
+      <li><%= habit.name %> - <%= habit.status %></li>
+    <% }); %>
+  </ul>
+  <form action="/habits" method="POST">
+    <input type="text" name="name" placeholder="Habit name" required>
+    <input type="text" name="description" placeholder="Habit description">
+    <select name="status" required>
+      <option value="done">Done</option>
+      <option value="not done">Not Done</option>
+      <option value="none">None</option>
+    </select>
+    <button type="submit">Add Habit</button>
+  </form>
+</body>
+</html>

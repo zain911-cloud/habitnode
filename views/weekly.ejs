@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weekly Habits</title>
+</head>
+<body>
+    <h1>Weekly Habits</h1>
+    <ul>
+        <% habits.forEach(habit => { %>
+            <li>
+                <strong>Name:</strong> <%= habit.name %><br>
+                <strong>Description:</strong> <%= habit.description %><br>
+                <strong>Status:</strong> <%= habit.status %>
+            </li>
+        <% }); %>
+    </ul>
+    <a href="/habits">Back to Habit List</a>
+</body>
+</html>
